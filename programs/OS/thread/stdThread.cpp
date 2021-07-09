@@ -1,17 +1,16 @@
 #include <stdio.h>
+#include <iostream>
 #include <thread>
 
 
 void threadproc1(){
-    while(true){
-        printf("I am a new Thread!\n");
-    }
+    printf("I am a new Thread!\n");
+    std::cout<<pthread_self()<<std::endl;
+    printf("%d\n",pthread_self());
 }
 
 void threadproc2(int a,int b){
-    while(true){
-        printf("I am a new Thread2!\n");
-    }
+    printf("I am a new Thread2!\n");
 }
 int main()
 {
